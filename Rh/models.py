@@ -21,3 +21,5 @@ class Funcionario(models.Model):
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     salario = models.DecimalField(max_digits=10,decimal_places=2)
     data_nascimento = models.DateField(null=True)
+    class Meta:
+        ordering = ('nome')
